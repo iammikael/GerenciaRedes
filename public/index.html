@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard SNMP</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Dashboard SNMP</h1>
+  <p class="subtitle">Monitoramento em tempo real via SNMP (MIB-2)</p>
+
+  <div class="grid" id="grid">
+    <div class="card">
+      <h2>Descrição do Sistema</h2>
+      <div class="value" id="sysDescr">carregando...</div>
+      <div class="oid">OID: 1.3.6.1.2.1.1.1.0</div>
+    </div>
+    <div class="card">
+      <h2>Tempo Ativo</h2>
+      <div class="value" id="sysUpTime">carregando...</div>
+      <div class="oid">OID: 1.3.6.1.2.1.1.3.0</div>
+    </div>
+    <div class="card">
+      <h2>Nome do Host</h2>
+      <div class="value" id="sysName">carregando...</div>
+      <div class="oid">OID: 1.3.6.1.2.1.1.5.0</div>
+    </div>
+    <div class="card">
+      <h2>Número de Interfaces</h2>
+      <div class="value" id="ifNumber">carregando...</div>
+      <div class="oid">OID: 1.3.6.1.2.1.2.1.0</div>
+    </div>
+    <div class="card">
+      <h2>Bytes Recebidos (if 1)</h2>
+      <div class="value" id="ifInOctets">carregando...</div>
+      <div class="oid">OID: 1.3.6.1.2.1.2.2.1.10.1</div>
+    </div>
+  </div>
+
+  <p class="status" id="status">Atualizando a cada 3 segundos...</p>
+
+  <script src="app.js"></script>
+</body>
+</html>
